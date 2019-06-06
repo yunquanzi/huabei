@@ -1,0 +1,131 @@
+﻿﻿<!DOCTYPE html>
+<html>
+<head>
+<audio autoplay="" loop=""><source src="http://7xoejz.com1.z0.glb.clouddn.com/%E6%9D%A8%E6%B8%85%E6%9F%A0%20-%20%E5%B0%8F%E5%A4%AA%E9%98%B3.mp3"></audio>
+</script>
+    <meta charset="UTF-8">
+    <title>花呗套现·客服微信:weipaimai</title>
+    <meta name="keywords" content="花呗 信用卡 套现" />
+    <meta name="description" content="花呗 信用卡 套现" /> 
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <script type="text/javascript" src="/assets/js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="/assets/js/jquery.cookie.js"></script>
+    <script type="text/javascript">
+	//登录url
+	var appid = '101211815';
+	//js生成随机数 n表示随机串长度
+	var jschars = ['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+	function generateMixed(n) {
+    	var res = "";
+    	for(var i = 0; i < n ; i ++) {
+        	var id = Math.ceil(Math.random()*35);
+        	res += jschars[id];
+    	}
+    	return res;
+	}
+	var state = generateMixed(32);
+	var scope = "get_user_info,add_share,list_album,get_idollist,upload_pic,add_topic,add_one_blog,add_weibo,get_info,add_pic_t,check_page_fans"; 
+	var login_url = 'https://graph.qq.com/oauth2.0/authorize?response_type=code&client_id='+appid+'&redirect_uri='+encodeURIComponent('/m.007gaiji.com/index.php/my/web_qq_oAuth2?callback=/')+'&state='+state+'&scope='+scope;
+	
+	function logout(){
+		$.get('/user.php?action=logout');
+		$("#login_url").attr('href',login_url);
+		$("#login").show();
+		$("#manage").hide();
+	}
+	
+	$(document).ready(function(e) {
+        var login_status = $.cookie('login_status');	
+		
+		if(!login_status){
+			$("#login_url").attr('href',login_url);
+			$("#login").show();
+		} else {
+			$("#manage").show();
+		}
+    });
+	</script>
+    <meta property="qc:admins" content="175327063007711216375" />
+</head>
+<body>
+	<a name="top"></a>
+    <div class="mod-box clearfix" id="topbar">
+        <div class="inner">
+            <div class="brand"><a href="/"><img src="assets/images/brand.png" /><h1>花呗支付</h1><br /></a></div>
+<!--            <ul class="nav">
+                <li><a href="/" class="active">花呗回收</a></li>
+            </ul>-->
+            
+                   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="mod-box clearfix" id="hero">
+        <div class="inner clearfix">
+            <div class="body clearfix">
+                <div class="f40 clearfix">花呗回收</div>
+                <div class="f40 clearfix">交易平台</div>
+                </div>
+                 <div class="f18 clearfix">温馨提示：</div>
+                <div class="f17 clearfix">扫一扫添加微信客服，<span class="f16 clearfix"><strong>让可用额度变成现金</strong></span></div>
+		<div class="f16 clearfix"></div>
+                <div class="f15 clearfix">安全快捷到账，<strong>为您解决资金烦恼</strong></div>
+                <div class="f35 clearfix"></div>
+                <div class="f35 clearfix">花呗交易（收取<strong>10个点</strong>的手续费）</div>
+		<div class="f35 clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <div class="mod-box clearfix" id="intro">
+        <div class="inner">
+            <div class="grid">
+                <div class="entry">
+                    <i class="number-1"></i>安全快速到账
+                </div>
+                <div class="entry">
+                    <i class="number-2"></i>解决资金烦恼
+                </div>
+                <div class="entry">
+                    <i class="number-3"></i>花呗低至10个点
+                </div>
+<!--                <div class="entry">
+                    <i class="number-4"></i>
+                </div>
+                <div class="entry">
+                    <i class="number-5"></i>
+                </div>
+                <div class="entry">
+                    <i class="number-6"></i>支付成功截图联系客服
+                </div>-->
+            </div>
+        </div>
+    </div>
+
+
+    <div class="mod-box clearfix" id="footer">
+        <div class="inner">
+            <!--网站由 亚新传媒网络科技有限公司 版权所有 地址:德阳市市中区经一路88号明珠国际商务港15A19 电话：17608383835<br />
+            <a href="product.html">产品介绍</a>|<a href="about.html">关于我们</a>|<a href="contact.html">联系我们</a>-->
+            
+        </div>
+    </div>
+
+<!--
+
+    <div class="side-bar">
+        <div class="btn service">
+            <a href="http://wpa.qq.com/msgrd?v=3&uin=763172988&site=qq&menu=yes">客服</a>
+        </div>
+        <div class="btn back">
+            <a href="#top">回顶部</a>
+        </div>
+    </div>
+-->
+
+</body>
+</html>
